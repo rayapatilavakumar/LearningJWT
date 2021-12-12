@@ -62,7 +62,8 @@ namespace JWT.API
 
         }
 
-        public static string GetClaim(string token)
+        //IN the video this method was named as validate token
+        public static string GetClaimValue(string token)
         {
             string userName = null;
 

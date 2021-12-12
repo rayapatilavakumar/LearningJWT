@@ -46,7 +46,7 @@ namespace JWT.API
             }
 
 
-            string validusername = TokenManager.GetClaim(token);
+            string validusername = TokenManager.GetClaimValue(token);
 
             if(un != validusername)
             {

@@ -31,27 +31,27 @@ namespace JWT.Web.Controllers
 
                     tokenbased = JsonConvert.DeserializeObject<string>(resultMessage);
                     Session["Token"]=tokenbased;
-                    Session["UserName"]="admin5";
+                    Session["UserName"]="admin";
 
                 }
                 return Content(tokenbased);
             }
 
-            //public ActionResult About()
-            //{
-            //    ViewBag.Message = "Your application description page.";
+            
+        }
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
 
-            //    return View();
-            //}
-
-            //public ActionResult Contact()
-            //{
-            //    ViewBag.Message = "Your contact page.";
-
-            //    return View();
-            //}
+            return View();
         }
 
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
         public async Task<ActionResult> GetData()
         {
 
