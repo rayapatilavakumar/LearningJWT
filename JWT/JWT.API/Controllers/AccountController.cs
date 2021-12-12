@@ -19,5 +19,10 @@ namespace JWT.API.Controllers
             }
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "User Name / Password  is invalid");
         }
+        [CustomAuthentication]
+        public HttpResponseMessage GetData()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, "Successfully retrieved the data");
+        }
     }
 }

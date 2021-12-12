@@ -62,7 +62,7 @@ namespace JWT.API
 
         }
 
-        public static string GetClaim(string token, string claimName)
+        public static string GetClaim(string token)
         {
             string userName = null;
 
@@ -74,7 +74,7 @@ namespace JWT.API
 
             identity = (ClaimsIdentity)principal.Identity;
 
-            Claim claim = identity.FindFirst(claimName);
+            Claim claim = identity.FindFirst(ClaimTypes.Name);
             
             userName = claim.Value;
 
